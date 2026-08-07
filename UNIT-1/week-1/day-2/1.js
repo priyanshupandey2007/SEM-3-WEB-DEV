@@ -13,7 +13,7 @@ const fs = require("fs");
 
 // 1. read file
 
-fs.readFile("./1.txt", "utf-8", (err, data) => {
+fs.readFile("./1.txt", "utf-8", (err, data) => { //utf-8 is liye lagaya hai kyuki isse humme answer humari language mein dega warna buffer data dega 
     if (err) {
         console.log("something went wrong");
     } else {
