@@ -1,4 +1,7 @@
+// step- 0 create node js project cammand --> npm init -y
+
 // step-1 import expressjs
+// expressjs is a framework to make API
 const express = require("express");
 
 // step-2 create a application through express.js
