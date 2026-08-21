@@ -1,0 +1,14 @@
+{
+  "student": [
+    { "id": 1, "name": "priyanshu" },
+    { "id": 2, "name": "archita" },
+    { "id": 3, "name": "pawan" },
+    { "id": 4, "name": "sumit" },
+    { "id": 4, "name": "sumit" }
+  ],
+  "trainer": [
+    { "id": 1, "name": "ray" },
+    { "id": 2, "name": "archita" },
+    { "id": 3, "name": "bay" }
+  ]
+}
