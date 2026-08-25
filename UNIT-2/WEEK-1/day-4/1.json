@@ -1,1 +1,12 @@
-{"student":[{"id":6,"name":"rahul"},{"id":2,"name":"archita"},{"id":3,"name":"pawan"},{"id":4,"name":"sumit"}],"trainer":[{"id":1,"name":"ray"},{"id":2,"name":"archita"},{"id":3,"name":"bay"}]}
+{
+  "student": [
+    { "id": 2, "name": "archita" },
+    { "id": 3, "name": "pawan" },
+    { "id": 4, "name": "sumit" }
+  ],
+  "trainer": [
+    { "id": 1, "name": "ray" },
+    { "id": 2, "name": "archita" },
+    { "id": 3, "name": "bay" }
+  ]
+}
