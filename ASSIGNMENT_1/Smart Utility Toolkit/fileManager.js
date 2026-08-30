@@ -2,62 +2,53 @@ const fs = require("fs");
 
 const fileName = "test.txt";
 
-// CREATE FILE
+// file create kr rhe hai 
 fs.writeFile(fileName, "Hello! This is my first file.", (err) => {
+  if (err) {
+    console.log("Error creating file:", err);
+    return;
+  }
 
+  console.log("File created successfully");
+
+  // file ko read kr rhe hai 
+  fs.readFile(fileName, "utf8", (err, data) => {
     if (err) {
-        console.log("Error creating file:", err);
-        return;
+      console.log("Error reading file:", err);
+      return;
     }
 
-    console.log("File created successfully");
+    console.log("File Content:", data);
 
-    // READ FILE
-    fs.readFile(fileName, "utf8", (err, data) => {
+    // file ko update kr rhe hai 
+    fs.appendFile(fileName, "\nThis line was added later.", (err) => {
+      if (err) {
+        console.log("Error updating file:", err);
+        return;
+      }
 
+      console.log("File updated successfully");
+
+      // ab hum updated file ko read kr rhe hai
+      fs.readFile(fileName, "utf8", (err, data) => {
         if (err) {
-            console.log("Error reading file:", err);
-            return;
+          console.log("Error reading updated file:", err);
+          return;
         }
 
-        console.log("File Content:", data);
+        console.log("Updated Content:");
+        console.log(data);
 
-        // UPDATE FILE
-        fs.appendFile(fileName, "\nThis line was added later.", (err) => {
+        // file ko dlt kr rhe hai 
+        fs.unlink(fileName, (err) => {
+          if (err) {
+            console.log("Error deleting file:", err);
+            return;
+          }
 
-            if (err) {
-                console.log("Error updating file:", err);
-                return;
-            }
-
-            console.log("File updated successfully");
-
-            // READ UPDATED FILE
-            fs.readFile(fileName, "utf8", (err, data) => {
-
-                if (err) {
-                    console.log("Error reading updated file:", err);
-                    return;
-                }
-
-                console.log("Updated Content:");
-                console.log(data);
-
-                // DELETE FILE
-                fs.unlink(fileName, (err) => {
-
-                    if (err) {
-                        console.log("Error deleting file:", err);
-                        return;
-                    }
-
-                    console.log("File deleted successfully");
-                });
-
-            });
-
+          console.log("File deleted successfully");
         });
-
+      });
     });
-
+  });
 });
