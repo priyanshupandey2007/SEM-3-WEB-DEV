@@ -1,4 +1,4 @@
-const isEven = require("./isEven");
+const isEven = require("../modules/isEven");
 
 const number = 10;
 
