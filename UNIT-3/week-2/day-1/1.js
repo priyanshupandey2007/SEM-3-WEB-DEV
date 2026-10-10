@@ -42,7 +42,7 @@ app.post("/create", async (req, res) => {
     await nreUser.save();
     res.send({ msg: "New User Succesfully" });
   } catch (error) {
-res.send({ msg: "Something went wrong" });
+    res.send({ msg: "Something went wrong" });
   }
 });
 

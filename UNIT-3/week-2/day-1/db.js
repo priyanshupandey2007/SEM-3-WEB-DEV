@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 
 // step-2 Connection building
-const connection = mongoose.connect("mongodb://127.0.0.1:27017/spiderman");
+const connection = mongoose.connect("mongodb+srv://priyanshupandey2864_db_user:priyanshupandey2864_db_user@cluster0.utzggvz.mongodb.net/spiderman");
 
 // step-3 making structure
 const userSchema = new mongoose.Schema({
